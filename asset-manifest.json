@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/admins/static/js/main.9040c414.js",
+    "static/media/user1.jpg": "/admins/static/media/user1.7e2bdd80c3c2d67b6e13.jpg",
+    "static/media/user2.jpg": "/admins/static/media/user2.a8394d63340f122c7bb4.jpg",
+    "index.html": "/admins/index.html",
+    "main.9040c414.js.map": "/admins/static/js/main.9040c414.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.9040c414.js"
+  ]
+}
