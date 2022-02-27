@@ -12,5 +12,5 @@ export const NavBar = styled.div`
 export const ImageContainer = styled.img`
   width: 100%;
   height: 100%;
-  src: ${({ src }) => src ?? "undefined"};
+  src: ${({ src }) => src ?? "null"};
 `;

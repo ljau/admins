@@ -9,9 +9,7 @@ export const TopBar = () => {
       <FlexContainer width="20%" >
         <ImageContainer src={pictures[0]} />
       </FlexContainer>
-      <NavBar>
-        <h4>TopBar</h4>
-      </NavBar>
+      <NavBar />       
     </FlexContainer>
   );
 };

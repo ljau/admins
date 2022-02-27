@@ -12,6 +12,10 @@ flex-direction: column;
 export const Title = styled.h4`
   font-size: 20px;
   font-weight: bold;
+  @media (max-width: 1080px) {
+    border-top: 3px solid #d6d5d5;
+    font-size: 350%;
+  }
 `;
 
 export const SideContainer = styled.div`
@@ -23,9 +27,10 @@ export const SideContainer = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  padding: 0 2% 0;
   border-right: ${({ noRightBorder }) => (noRightBorder ? "0" : "1px solid #d6d5d5")};
   @media (max-width: 1080px) {
+    padding: 2% 0 2%;
+    align-items: center;
     width: 100%;
     min-height: 100%;
   }
