@@ -9,4 +9,8 @@ export const FlexContainer = styled.div`
   align-items: ${({ align }) => align ?? "center"};
   flex-direction: ${({ dir }) => dir ?? "row"};
   min-height: ${({ minHeight }) => minHeight ?? "undefined"};
+  border-bottom: ${({ botBorder }) => (botBorder ? "1px solid #d6d5d5" : "0")};
+  @media (max-width: 1080px) {
+    justify-content: center;
+  }
 `;

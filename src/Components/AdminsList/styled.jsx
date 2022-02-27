@@ -35,3 +35,10 @@ export const ActiveTag = styled.h4`
     }
   }}
 `;
+
+export const UserPicture = styled.img`
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  src: ${({ src }) => src ?? "undefined"};
+`;

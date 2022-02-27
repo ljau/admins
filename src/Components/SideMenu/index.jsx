@@ -7,19 +7,19 @@ import { MenuOptionTag } from "./styled";
 export const SideMenu = () => {
   const getMenuItems = MenuOptions.map((data) => {
     return (
-      <FlexContainer height="auto">
-        <FontAwesomeIcon icon={data.icon} color={colors.turquoise} />
+      <FlexContainer botBorder key={data.option}>
+        <FontAwesomeIcon icon={data.icon} color={colors.turquoise} style={{width: "5%", height: "5%"}}/>
         <MenuOptionTag>{data.option}</MenuOptionTag>
       </FlexContainer>
     );
   });
 
   return (
-    <FlexContainer minHeight="90vh" jc="space-between" dir="column">
+    <FlexContainer minHeight="80vh" jc="space-between" dir="column">
       <FlexContainer dir="column" height="90%" >
         {getMenuItems}
       </FlexContainer>
-      <FlexContainer height="5rem" >Necesitas ayuda?</FlexContainer>
+      <FlexContainer height="10%" >Necesitas ayuda?</FlexContainer>
     </FlexContainer>
   );
 };

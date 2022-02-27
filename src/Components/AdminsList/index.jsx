@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { FlexContainer } from "..";
-import { AdminsData, icons } from "../../Library";
-import { ActiveTag, StyledCheckbox } from "./styled";
+import { AdminsTableBar, FlexContainer } from "..";
+import { AdminsData, icons, pictures } from "../../Library";
+import { ActiveTag, StyledCheckbox, UserPicture } from "./styled";
 
 export const AdminsList = () => {
   const DetailsIcons = [
@@ -13,15 +13,16 @@ export const AdminsList = () => {
 
   const getDetailsIcons = DetailsIcons.map((detailsIcon) => {
     return (
-      <FontAwesomeIcon icon={detailsIcon.name} color={detailsIcon.color} />
+      <FontAwesomeIcon key={detailsIcon.color} icon={detailsIcon.name} color={detailsIcon.color} />
     );
   });
 
   const getAdminsData = AdminsData.map((data) => {
     return (
-      <FlexContainer height="4rem">
-        <FlexContainer width="10%">
+      <FlexContainer key={data.name} height="4rem" botBorder >
+        <FlexContainer width="10%" jc={"space-evenly"}>
           <StyledCheckbox />
+          <UserPicture src={pictures[data.picture]} />
         </FlexContainer>
         <FlexContainer width="20%">
           <h4>{data.name}</h4>
@@ -43,7 +44,8 @@ export const AdminsList = () => {
   });
 
   return (
-    <FlexContainer minHeight="80vh" dir="column">
+    <FlexContainer minHeight="60vh" dir="column">
+      <AdminsTableBar />
       {getAdminsData}
     </FlexContainer>
   );

@@ -1,21 +1,22 @@
 import React from "react";
-import { colors } from "../../Library";
 import { TopBar, FlexContainer, SideMenu, AdminsList } from "..";
-import { Layout, SideContainer, Title } from "./styled";
+import { Layout, MainTable, SideContainer, Title } from "./styled";
 
 export const Administradores = () => {
   return (
     <Layout>
       <TopBar />
-      <FlexContainer>
+      <MainTable>
         <SideContainer width="16%">
           <SideMenu />
         </SideContainer>
         <SideContainer width="76%">
-          <Title>Administradores de la consola</Title>
-          <AdminsList/>
+            <Title>Administradores de la consola</Title>
+          <FlexContainer>
+          </FlexContainer>
+          <AdminsList />
         </SideContainer>
-      </FlexContainer>
+      </MainTable>
     </Layout>
   );
 };
